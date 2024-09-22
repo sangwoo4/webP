@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #week ul{
+            background-color: skyblue;
+        }
+        #week ul li{
+            margin: 7px;
+            display: inline-block;
+        }
+        #week ul li a{
+            color: white;
+            text-decoration: none;
+        }
+        #week a:hover{color: blue;}
+        table{
+            border-collapse: collapse;
+        }
+        
+        #box div {
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            border: 1px solid black;
+        }
+    
+        tbody tr:hover {
+        background-color: rgba(255, 255, 0, 0.18);
+        }
+
+        td, th {
+            padding: 10px;
+            height: 10px;
+            padding-left: 60px;
+            padding-right: 60px;
+            text-align: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Web Programming</h1>
+    <nav id = "week">
+        <ul>
+            <li><a href ="#week1">Week1</a></li>
+            <li><a href ="#week2">Week2</a></li>
+            <li><a href ="#week3">Week3</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <hr>
+
+   <section>
+    <b>웹에 관하여</b>
+    <details>
+        <summary>웹의 기본 목적</summary>
+        <p>웹의 기본 목적은 한 컴퓨터에서 만든 문서를 다른 컴퓨터에서 쉽게 볼 수 있게 하는 것이다.</p>
+    </details>
+    <details>
+        <summary>왜 Why?</summary>
+        <p>전 세계의 컴퓨터들을 인터넷으로 연결한 시스템을 www, 즉 웹이라고 부른다.</p>
+    </details>
+    </section>
+
+    <br><br>
+    <section>
+        <table id = "schedule "border="1">
+            <caption><b>Weekly Schedule</b></caption>
+            <thead>
+                <tr>
+                    <th>Week</th>
+                    <th>Date</th>
+                    <th>contents</th>
+                </tr>
+            </thead>
+
+            <tbody style="text-align: center;">
+                <tr>
+                    <td>1</td>
+                    <td>Sept. 2</td>
+                    <td>
+                        <ul>
+                            <li>강의 개요</li>
+                            <li>웹의 개념과 구조</li>
+                            <li>Visual Studio Code</li>
+                        </ul>
+                    </td>
+                    <tr>
+                        <td>2</td>
+                        <td>Sept. 9</td>
+                        <td>HTML Review</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Sept. 16</td>
+                        <td>CSS Revi</td>
+                    </tr>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <br><br>
+    <section id="week1">
+        <ol>
+            <li><b>Week 1</b>
+                <ul>
+                    <li><a href="https://learn.hansung.ac.kr/mod/ubfile/view.php?id=893699">강의 개요</a></li>
+                    <li><a href="#history">웹의 개념과 역사</a></li>
+                    <li><a href="#vscode">Visual Studio Code</a></li>
+                    <ol>
+                        <li>설치</li>
+                        <li>유용한 plug-ins
+                            <ul>
+                                <li>material</li>
+                                <li>prettier</li>
+                                <li>indent-rainbow</li>
+                                <li>html css tag</li>
+                                <li>live server</li>
+                            </ul>
+                        </li>
+                        <li>EMMET</li>
+                    </ol>
+                </ul>
+            </li>
+        </ol>
+    </section>
+
+    <hr>
+
+    <!-- Week 2 섹션 -->
+    <section id="week2">
+        <ol start="2">
+            <li><b>Week 2 : <a href="https://learn.hansung.ac.kr/mod/ubfile/view.php?id=893781">HTML Review</a></b>
+                <br><br>
+                <b>Input Types</b>
+                <br><br>
+                <u>Check Box</u>
+                <br><br>
+                <input type="checkbox" value="HTML5"> HTML5
+                <input type="checkbox" value="CSS5"> CSS5
+                <input type="checkbox" value="JavaScript"> JavaScript
+                <br><br>
+                <u>Radio Button</u>
+                <br><br>
+                <input type="radio" name="web">HTML5 <br>
+                <input type="radio" name="web">CSS5 <br>
+                <input type="radio" name="web">JavaScript <br>
+                <br>
+                <u>Combo Box</u>
+                <br><br>
+                <select>
+                    <option>HTML5</option>
+                    <option>CSS5</option>
+                    <option>JavaScript</option>
+                </select>
+            </li>
+        </ol>
+    </section>
+
+    <hr>
+
+    <!-- Week 3 섹션 -->
+    <section id="week3">
+        <ol start="3">
+            <li><b>Week 3: <a href="https://learn.hansung.ac.kr/mod/ubfile/view.php?id=895032">CSS Review</a></b>
+                <br><br>
+                <ul>
+                    <li>Selectors: *, tag, #id, .class, 가상클래스, attribute</li>
+                    <li>Properties: background-color, background, color, border-color, font-size, text-align, text-decoration, font-family, ...</li>
+                    <li>Box model
+                        <ul>
+                            <li>block 요소, inline 요소</li>
+                            <li>margin, padding, border, height, width</li>
+                        </ul>
+                    </li>
+                    <li>display: block, inline, inline-block</li>
+                    <li>position: absolute, relative, fixed, float</li>
+                </ul>
+
+                <div id="box">
+                    <div></div>
+                </div>
+            </li>
+        </ol>
+    </section>
+    <hr>
+    <section id ="week3">
+        <ol>
+        <li><b>Week 4:<a> aa</a></b>
+
+    </section>
+
+    <footer>
+        <hr>
+        Copyright ⓒ 2024 by Sung-Dong ALL Right Reserved
+    </footer>
+</body>
+</html>
