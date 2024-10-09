@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function imageSize(e, obj){
+            e.preventDefault();
+            let currentWidth = obj.clientWidth;
+            let changeFactor = 0.05; 
+
+            if(e.wheelDelta < 0){ 
+
+                currentWidth += currentWidth * changeFactor;
+            } else {
+    
+                currentWidth -= currentWidth * changeFactor;
+                if (currentWidth < 50) currentWidth = 50;
+            }
+            
+            obj.style.width = currentWidth + 'px'; 
+        }
+    </script>
+</head>
+<body>
+    <h2>마우스 휠을 이용한 이미지 확대/축소</h2>
+    <hr>
+    <p>이미지 위에 휠을 위로 굴리면 이미지가 축소되고 아래로 굴리면 이미지가 확대됩니다.</p>
+    <img src="/week5/apple.jpg" id='img' onmousewheel="imageSize(event, this)">
+</body>
+</html>

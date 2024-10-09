@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+    <script>
+        function insert(num) {
+            let exp = document.getElementById('exp');
+            if (exp.value === "0") {
+                exp.value = num;
+            } else {
+                exp.value += num;
+            }
+        }
+
+        function clean() {
+            document.getElementById('exp').value = "0";
+        }
+
+        function backspace() {
+            let exp = document.getElementById('exp').value;
+            document.getElementById('exp').value = exp.substring(0, exp.length - 1);
+            if (document.getElementById('exp').value === "") {
+                document.getElementById('exp').value = "0";
+            }
+        }
+
+        function calculate() {
+            let exp = document.getElementById('exp').value;
+             document.getElementById('exp').value = eval(exp);
+
+        }
+    </script>
+</head>
+<body>
+    <h2>계산기 만들기</h2>
+    <input type="text" id="exp" value="0" readonly>
+    <br>
+    <button onclick="backspace()">Back</button>
+    <button onclick="clean()">CE</button>
+    <button onclick="clean()">C</button>
+    <button onclick="calculate()">=</button>
+    <br>
+    <button onclick="insert('7')">7</button>
+    <button onclick="insert('8')">8</button>
+    <button onclick="insert('9')">9</button>
+    <button onclick="insert('/')">/</button>
+    <br>
+    <button onclick="insert('4')">4</button>
+    <button onclick="insert('5')">5</button>
+    <button onclick="insert('6')">6</button>
+    <button onclick="insert('*')">*</button>    
+    <br>
+    <button onclick="insert('1')">1</button>
+    <button onclick="insert('2')">2</button>
+    <button onclick="insert('3')">3</button>
+    <button onclick="insert('-')">-</button>    
+    <br>
+    <button onclick="insert('0')">0</button>
+    <button onclick="insert('+')">+</button>
+    <button>NONE</button>
+    <button>NONE</button>
+
+</body>
+</html>
